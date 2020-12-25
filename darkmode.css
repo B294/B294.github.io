@@ -1,0 +1,56 @@
+body {
+  font-weight: 400;
+    --text-color: #222;
+    --bkg-color: whitesmoke;
+    --anchor-color: #0033cc;
+  }
+  
+  body.dark-theme {
+    font-weight: 350;
+    --text-color: #eee;
+    --bkg-color: #121212;
+    --anchor-color: #809fff;
+  }
+  
+  body, 
+  footer,
+  .features,
+  nav ul li
+   {
+    color: var(--text-color);
+    background: var(--bkg-color);
+  }
+  a {
+    color: var(--anchor-color);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      font-weight: 350;
+      color: #eee;
+      background: #121212;
+    }
+  
+    body a {
+      color: #809fff;
+    }
+  
+  
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+  }
+
+  body.dark-theme img {
+    filter: brightness(.8) contrast(1.2);
+  }
+  
+  /* Or apply it via media query */
+  @media (prefers-color-scheme: dark) {
+    img {
+      filter: brightness(.8) contrast(1.2);
+    }
+  }
+  
+   
